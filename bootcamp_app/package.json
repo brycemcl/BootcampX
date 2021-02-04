@@ -1,0 +1,17 @@
+{
+  "name": "bootcamp_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "students.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "students": "node students.js",
+    "teachers": "node teachers.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.5.1"
+  }
+}
