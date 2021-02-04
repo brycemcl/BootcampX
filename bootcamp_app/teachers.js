@@ -14,10 +14,10 @@ FROM  "assistance_requests", "teachers","students","cohorts"
 WHERE "assistance_requests"."teacher_id" = "teachers"."id" 
 AND "assistance_requests"."student_id" = "students"."id" 
 AND "students"."cohort_id" = "cohorts"."id" 
-AND "cohorts"."name" = '${args[0]}' 
+AND "cohorts"."name" = $1 
 GROUP BY "teachers"."name", "cohorts"."name" 
 ORDER BY "teacher" ASC
-`)
+`, args)
   .then(res => {
     res.rows.forEach(user => {
       console.log(`${user.cohort}: ${user.teacher}`);
